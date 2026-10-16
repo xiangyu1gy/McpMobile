@@ -1,0 +1,5 @@
+<resources>
+    <style name="Theme.McpMobile" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">#3DDC84</item>
+    </style>
+</resources>
