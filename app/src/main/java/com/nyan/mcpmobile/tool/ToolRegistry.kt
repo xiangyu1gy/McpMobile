@@ -22,6 +22,17 @@ object ToolRegistry {
         register(ReadTextTool())
         register(WriteTextTool())
         register(DeviceInfoTool(context))
+        register(SearchFilesTool())
+
+        // ↓ APK 逆向工具（dexlib2 / baksmali）
+
+        register(ApkSearchClassTool())
+
+        register(ApkReadClassTool())
+
+        register(ApkSearchStringsTool())
+
+        register(ApkListPackagesTool())
     }
 
     fun register(tool: McpTool) {

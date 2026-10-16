@@ -52,4 +52,8 @@ dependencies {
 
     // 协程
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
+
+    // 逆向分析：DEX 解析 + Smali 反编译
+    implementation("org.smali:dexlib2:2.5.2")
+    implementation("org.smali:baksmali:2.5.2")
 }
