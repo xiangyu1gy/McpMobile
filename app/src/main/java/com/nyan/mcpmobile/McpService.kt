@@ -9,6 +9,7 @@ import android.content.Intent
 import android.os.Build
 import android.os.IBinder
 import androidx.core.app.NotificationCompat
+import fi.iki.elonen.NanoHTTPD
 import com.nyan.mcpmobile.server.McpServer
 import com.nyan.mcpmobile.tool.ToolRegistry
 import java.text.SimpleDateFormat
@@ -64,7 +65,7 @@ class McpService : Service() {
             val s = McpServer(port, token, onlyLocal) { msg ->
                 addLog("${timeFmt.format(Date())}  $msg")
             }
-            s.start(McpServer.SOCKET_READ_TIMEOUT, false)
+            s.start(NanoHTTPD.SOCKET_READ_TIMEOUT, false)
             server = s
             isRunning = true
             addLog("${timeFmt.format(Date())}  System: server started on port $port")
